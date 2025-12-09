@@ -6,17 +6,16 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { ContentData } from './content';
 import { getSiteConfig } from './site-config';
+import Navigation from '../Navigation';
+import Footer from '../Footer';
+import Breadcrumbs from '../Breadcrumbs';
+import StructuredData from '../StructuredData';
 
 interface PillarTemplateProps {
   content: ContentData;
   childPages: { title: string; url: string; description?: string }[];
   // Optional: Override site config for this instance
   siteConfig?: ReturnType<typeof getSiteConfig>;
-  // Optional: Custom Navigation and Footer components
-  Navigation?: React.ComponentType;
-  Footer?: React.ComponentType;
-  Breadcrumbs?: React.ComponentType<{ items: { label: string; url: string }[] }>;
-  StructuredData?: React.ComponentType<{ schemaType: string; data: any }>;
 }
 
 // Extract headings from markdown for table of contents
@@ -49,10 +48,6 @@ export default function PillarTemplate({
   content, 
   childPages,
   siteConfig: customSiteConfig,
-  Navigation,
-  Footer,
-  Breadcrumbs,
-  StructuredData,
 }: PillarTemplateProps) {
   const config = customSiteConfig || getSiteConfig();
   const { frontmatter, content: markdown } = content;
@@ -117,15 +112,9 @@ export default function PillarTemplate({
   // Match everything from the start until the first ## heading
   const contentWithoutH1 = markdown.replace(/^[\s\S]*?(?=##\s)/, '');
 
-  // Default components if not provided
-  const NavComponent = Navigation || (() => null);
-  const FooterComponent = Footer || (() => null);
-  const BreadcrumbsComponent = Breadcrumbs || (({ items }: { items: { label: string; url: string }[] }) => null);
-  const StructuredDataComponent = StructuredData || (() => null);
-
   return (
     <>
-      <StructuredDataComponent
+      <StructuredData
         schemaType="Article"
         data={{
           '@type': 'Article',
@@ -143,18 +132,18 @@ export default function PillarTemplate({
         }}
       />
       {faqSchema && (
-        <StructuredDataComponent
+        <StructuredData
           schemaType="FAQPage"
           data={faqSchema}
         />
       )}
-      <NavComponent />
+      <Navigation />
       
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <div className="bg-gradient-to-b from-slate-50 to-white border-b border-slate-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-            <BreadcrumbsComponent items={breadcrumbs} />
+            <Breadcrumbs items={breadcrumbs} />
             
             <div className="max-w-4xl mt-6">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-900 leading-tight mb-6">
@@ -401,7 +390,7 @@ export default function PillarTemplate({
           </button>
         )}
       </main>
-      <FooterComponent />
+      <Footer />
     </>
   );
 }

@@ -4,10 +4,6 @@ import { getSiteConfig } from '../../components/templates/site-config';
 import PillarTemplate from '../../components/templates/PillarTemplate';
 import SubtopicTemplate from '../../components/templates/SubtopicTemplate';
 import PAATemplate from '../../components/templates/PAATemplate';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-import Breadcrumbs from '../../components/Breadcrumbs';
-import StructuredData from '../../components/StructuredData';
 
 interface PageProps {
   params: Promise<{ slug: string[] }>;
@@ -46,10 +42,6 @@ export default async function ResourcePage({ params }: PageProps) {
     content,
     childPages,
     siteConfig: config,
-    Navigation,
-    Footer,
-    Breadcrumbs,
-    StructuredData,
   };
 
   switch (content.frontmatter.template) {
