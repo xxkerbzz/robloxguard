@@ -7,7 +7,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'RobloxGuard Privacy Policy',
   description: 'RobloxGuard Privacy Policy. Learn how we collect, use, and protect your personal information and your child\'s data.',
-  canonical: 'https://robloxguard.com/privacy',
+  canonical: 'https://robloxguard.vercel.app/privacy',
 });
 
 export default function PrivacyPage() {

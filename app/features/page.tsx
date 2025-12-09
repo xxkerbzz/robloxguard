@@ -9,7 +9,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'RobloxGuard Features - Complete Roblox Protection',
   description: 'Discover all RobloxGuard features: real-time monitoring, fraud detection, instant alerts, spending limits, and more. Complete protection for your child\'s Roblox account.',
-  canonical: 'https://robloxguard.com/features',
+  canonical: 'https://robloxguard.vercel.app/features',
 });
 
 export default function FeaturesPage() {

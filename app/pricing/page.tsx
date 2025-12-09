@@ -9,7 +9,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'RobloxGuard Pricing - Protect Your Child for $12/month',
   description: 'Simple, transparent pricing for RobloxGuard. Protect your child\'s Roblox account for $9-15/month. Free trial available, no credit card required.',
-  canonical: 'https://robloxguard.com/pricing',
+  canonical: 'https://robloxguard.vercel.app/pricing',
 });
 
 export default function PricingPage() {
@@ -25,7 +25,7 @@ export default function PricingPage() {
     price: '12',
     priceCurrency: 'USD',
     availability: 'https://schema.org/InStock',
-    url: 'https://robloxguard.com/pricing',
+    url: 'https://robloxguard.vercel.app/pricing',
   };
 
   return (

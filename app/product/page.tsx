@@ -9,7 +9,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'RobloxGuard Product - Roblox Fraud Protection Platform',
   description: 'Learn how RobloxGuard monitors your child\'s Roblox account in real-time to prevent scams and unauthorized spending. See how our fraud detection works.',
-  canonical: 'https://robloxguard.com/product',
+  canonical: 'https://robloxguard.vercel.app/product',
 });
 
 export default function ProductPage() {

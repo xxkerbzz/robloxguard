@@ -10,7 +10,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'RobloxGuard Resources - Guides and Articles',
   description: 'Browse our comprehensive guides and articles about Roblox parental controls, account security, fraud prevention, and online safety.',
-  canonical: 'https://robloxguard.com/resources',
+  canonical: 'https://robloxguard.vercel.app/resources',
 });
 
 export default async function ResourcesPage() {

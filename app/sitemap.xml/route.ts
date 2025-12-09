@@ -33,7 +33,7 @@ ${urls.map((url) => {
     console.error('Sitemap generation error:', error);
     
     // Get BASE_URL from sitemap-utils or use fallback
-    const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://robloxguard.com';
+    const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://robloxguard.vercel.app';
     const corePages = [
       { loc: `${BASE_URL}/`, lastmod: new Date(), changefreq: 'weekly' as const, priority: 1.0 },
       { loc: `${BASE_URL}/product`, lastmod: new Date(), changefreq: 'monthly' as const, priority: 0.8 },

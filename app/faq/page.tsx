@@ -9,7 +9,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'RobloxGuard FAQ - Frequently Asked Questions',
   description: 'Frequently asked questions about RobloxGuard: setup, features, pricing, security, and more. Get answers to common questions.',
-  canonical: 'https://robloxguard.com/faq',
+  canonical: 'https://robloxguard.vercel.app/faq',
 });
 
 export default function FAQPage() {

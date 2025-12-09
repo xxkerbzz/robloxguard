@@ -8,7 +8,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'RobloxGuard Security - How We Protect Your Data',
   description: 'Learn how RobloxGuard protects your data with bank-level encryption, secure storage, and compliance with privacy regulations. Your family\'s security is our priority.',
-  canonical: 'https://robloxguard.com/security',
+  canonical: 'https://robloxguard.vercel.app/security',
 });
 
 export default function SecurityPage() {

@@ -8,7 +8,7 @@ import { generateMetadata as genMeta } from './lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'RobloxGuard - Stop Roblox Scams Before They Happen',
   description: 'Protect your child\'s Roblox account from fraud with real-time monitoring and instant alerts. Block suspicious transactions before they happen. Start your free trial today.',
-  canonical: 'https://robloxguard.com',
+  canonical: 'https://robloxguard.vercel.app',
 });
 
 export default function HomePage() {
@@ -16,8 +16,8 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'RobloxGuard',
-    url: 'https://robloxguard.com',
-    logo: 'https://robloxguard.com/logo.png',
+    url: 'https://robloxguard.vercel.app',
+    logo: 'https://robloxguard.vercel.app/logo.png',
     description: 'Parental control platform that monitors Roblox accounts in real-time to prevent scams and unauthorized spending.',
     sameAs: [],
   };
@@ -26,10 +26,10 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'RobloxGuard',
-    url: 'https://robloxguard.com',
+    url: 'https://robloxguard.vercel.app',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://robloxguard.com/search?q={search_term_string}',
+      target: 'https://robloxguard.vercel.app/search?q={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
   };

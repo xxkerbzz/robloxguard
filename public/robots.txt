@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://robloxguard.com/sitemap.xml
+Sitemap: https://robloxguard.vercel.app/sitemap.xml
 

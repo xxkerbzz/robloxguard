@@ -15,7 +15,7 @@ export function generateMetadata({
   ogImage,
   noindex = false,
 }: SEOProps): Metadata {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://robloxguard.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://robloxguard.vercel.app';
   const fullTitle = title.includes('RobloxGuard') ? title : `${title} | RobloxGuard`;
   
   return {

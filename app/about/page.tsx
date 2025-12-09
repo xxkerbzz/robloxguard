@@ -9,7 +9,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'About RobloxGuard - Our Mission to Protect Kids Online',
   description: 'Learn about RobloxGuard\'s mission to protect children from Roblox fraud. Built by parents, for parents. Discover our commitment to child safety.',
-  canonical: 'https://robloxguard.com/about',
+  canonical: 'https://robloxguard.vercel.app/about',
 });
 
 export default function AboutPage() {
@@ -22,7 +22,7 @@ export default function AboutPage() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'RobloxGuard',
-    url: 'https://robloxguard.com',
+    url: 'https://robloxguard.vercel.app',
     description: 'Parental control platform protecting children from Roblox fraud',
   };
 

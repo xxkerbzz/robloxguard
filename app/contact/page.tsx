@@ -8,7 +8,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'Contact RobloxGuard - Get Help and Support',
   description: 'Contact RobloxGuard for support, sales inquiries, or questions. We\'re here to help protect your family from Roblox fraud.',
-  canonical: 'https://robloxguard.com/contact',
+  canonical: 'https://robloxguard.vercel.app/contact',
 });
 
 export default function ContactPage() {

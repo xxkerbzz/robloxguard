@@ -10,7 +10,7 @@ export interface SitemapUrl {
 // BASE_URL should be set from PRD (production domain)
 // For localhost development, use: 'http://localhost:3000'
 // For production, use the actual domain from PRD
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://robloxguard.com';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://robloxguard.vercel.app';
 const CURRENT_DATE = new Date(); // Date object for lastModified
 
 /**

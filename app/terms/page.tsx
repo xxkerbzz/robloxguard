@@ -7,7 +7,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'RobloxGuard Terms of Service',
   description: 'RobloxGuard Terms of Service. Read our terms and conditions for using our fraud protection platform.',
-  canonical: 'https://robloxguard.com/terms',
+  canonical: 'https://robloxguard.vercel.app/terms',
 });
 
 export default function TermsPage() {
