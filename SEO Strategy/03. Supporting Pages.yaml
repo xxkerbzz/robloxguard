@@ -1,0 +1,260 @@
+# Supporting Pages Structure
+#
+# Roblox Parental Controls
+# └── Setting Up Parental Controls
+#     └── How do I set up parental controls on Roblox?
+#
+# Roblox Account Security
+# └── Protecting Account Credentials
+#     └── How can I protect my child's Roblox account from hackers?
+#
+# Roblox Fraud Prevention
+# └── Identifying Scam Websites
+#     └── How do I know if a Robux generator website is a scam?
+#
+# Roblox Spending Management
+# └── Setting Spending Limits
+#     └── How can I limit my child's spending on Roblox?
+#
+# Roblox Safety Education
+# └── Teaching Kids About Online Safety
+#     └── How do I teach my child about Roblox safety?
+
+---
+
+silos:
+  - silo_name: "Roblox Parental Controls"
+    entity_relationships:
+      primary_entity: "Roblox parental controls"
+      supporting_entities:
+        - "account monitoring"
+        - "spending limits"
+        - "activity tracking"
+      related_entities_other_silos:
+        "Roblox Account Security": "Parental controls help secure accounts"
+        "Roblox Fraud Prevention": "Controls prevent fraud"
+    
+    cross_silo_linking:
+      link_to:
+        - silo: "Roblox Account Security"
+          reason: "When discussing account protection methods"
+        - silo: "Roblox Fraud Prevention"
+          reason: "When explaining how controls prevent scams"
+      link_from:
+        - "Roblox Account Security"
+        - "Roblox Fraud Prevention"
+    
+    main_pillar:
+      url: /resources/roblox-parental-controls
+      title: "Roblox Parental Controls: Complete Guide"
+      h1: "Roblox Parental Controls: Complete Guide"
+      meta_description: "Complete guide to setting up and using Roblox parental controls to protect your child's account, prevent unauthorized spending, and monitor activity."
+      primary_keyword: roblox parental controls
+      word_count: 3500
+      schema_type: Article
+    
+    subtopic_pillars:
+      - url: /resources/roblox-parental-controls/setting-up-parental-controls
+        title: "Setting Up Parental Controls on Roblox: Step-by-Step Guide"
+        meta_description: "Learn how to set up parental controls on Roblox to protect your child's account and prevent unauthorized purchases."
+        primary_keyword: setting up roblox parental controls
+        word_count: 2200
+        schema_type: Article
+    
+    paa_posts:
+      defaults:
+        word_count: 1200
+        schema_type: Article, FAQPage
+      posts:
+        - title: "How do I set up parental controls on Roblox?"
+          slug: how-do-i-set-up-parental-controls-on-roblox
+          parent: setting-up-parental-controls
+
+  - silo_name: "Roblox Account Security"
+    entity_relationships:
+      primary_entity: "Roblox account security"
+      supporting_entities:
+        - "password protection"
+        - "two-factor authentication"
+        - "account recovery"
+      related_entities_other_silos:
+        "Roblox Parental Controls": "Security features complement parental controls"
+        "Roblox Fraud Prevention": "Strong security prevents fraud"
+    
+    cross_silo_linking:
+      link_to:
+        - silo: "Roblox Parental Controls"
+          reason: "When explaining how security works with controls"
+        - silo: "Roblox Fraud Prevention"
+          reason: "When discussing how security prevents scams"
+      link_from:
+        - "Roblox Parental Controls"
+        - "Roblox Fraud Prevention"
+    
+    main_pillar:
+      url: /resources/roblox-account-security
+      title: "Roblox Account Security: Complete Protection Guide"
+      h1: "Roblox Account Security: Complete Protection Guide"
+      meta_description: "Comprehensive guide to securing your child's Roblox account from hackers, phishing, and unauthorized access."
+      primary_keyword: roblox account security
+      word_count: 3500
+      schema_type: Article
+    
+    subtopic_pillars:
+      - url: /resources/roblox-account-security/protecting-account-credentials
+        title: "Protecting Roblox Account Credentials: Essential Security Tips"
+        meta_description: "Learn how to protect your child's Roblox account credentials from hackers and phishing attempts."
+        primary_keyword: protecting roblox account credentials
+        word_count: 2200
+        schema_type: Article
+    
+    paa_posts:
+      defaults:
+        word_count: 1200
+        schema_type: Article, FAQPage
+      posts:
+        - title: "How can I protect my child's Roblox account from hackers?"
+          slug: how-can-i-protect-my-childs-roblox-account-from-hackers
+          parent: protecting-account-credentials
+
+  - silo_name: "Roblox Fraud Prevention"
+    entity_relationships:
+      primary_entity: "Roblox fraud prevention"
+      supporting_entities:
+        - "scam detection"
+        - "fraud alerts"
+        - "unauthorized spending prevention"
+      related_entities_other_silos:
+        "Roblox Parental Controls": "Controls help prevent fraud"
+        "Roblox Account Security": "Security reduces fraud risk"
+    
+    cross_silo_linking:
+      link_to:
+        - silo: "Roblox Parental Controls"
+          reason: "When explaining how controls prevent fraud"
+        - silo: "Roblox Account Security"
+          reason: "When discussing security's role in fraud prevention"
+      link_from:
+        - "Roblox Parental Controls"
+        - "Roblox Account Security"
+    
+    main_pillar:
+      url: /resources/roblox-fraud-prevention
+      title: "Roblox Fraud Prevention: Complete Guide to Stopping Scams"
+      h1: "Roblox Fraud Prevention: Complete Guide to Stopping Scams"
+      meta_description: "Complete guide to preventing Roblox fraud, identifying scams, and protecting your child from unauthorized spending and account theft."
+      primary_keyword: roblox fraud prevention
+      word_count: 3500
+      schema_type: Article
+    
+    subtopic_pillars:
+      - url: /resources/roblox-fraud-prevention/identifying-scam-websites
+        title: "Identifying Roblox Scam Websites: Red Flags and Warning Signs"
+        meta_description: "Learn how to identify Roblox scam websites and protect your child from fake Robux generators and phishing sites."
+        primary_keyword: identifying roblox scam websites
+        word_count: 2200
+        schema_type: Article
+    
+    paa_posts:
+      defaults:
+        word_count: 1200
+        schema_type: Article, FAQPage
+      posts:
+        - title: "How do I know if a Robux generator website is a scam?"
+          slug: how-do-i-know-if-a-robux-generator-website-is-a-scam
+          parent: identifying-scam-websites
+
+  - silo_name: "Roblox Spending Management"
+    entity_relationships:
+      primary_entity: "Roblox spending management"
+      supporting_entities:
+        - "spending limits"
+        - "budget controls"
+        - "purchase approval"
+      related_entities_other_silos:
+        "Roblox Parental Controls": "Spending controls are part of parental controls"
+        "Roblox Fraud Prevention": "Limits prevent unauthorized spending"
+    
+    cross_silo_linking:
+      link_to:
+        - silo: "Roblox Parental Controls"
+          reason: "When explaining spending controls as part of parental controls"
+        - silo: "Roblox Fraud Prevention"
+          reason: "When discussing how limits prevent fraud"
+      link_from:
+        - "Roblox Parental Controls"
+        - "Roblox Fraud Prevention"
+    
+    main_pillar:
+      url: /resources/roblox-spending-management
+      title: "Roblox Spending Management: Complete Guide to Budgeting and Limits"
+      h1: "Roblox Spending Management: Complete Guide to Budgeting and Limits"
+      meta_description: "Complete guide to managing your child's Roblox spending, setting limits, and preventing unauthorized purchases."
+      primary_keyword: roblox spending management
+      word_count: 3500
+      schema_type: Article
+    
+    subtopic_pillars:
+      - url: /resources/roblox-spending-management/setting-spending-limits
+        title: "Setting Roblox Spending Limits: Step-by-Step Guide"
+        meta_description: "Learn how to set spending limits on Roblox to prevent unauthorized purchases and manage your child's in-game spending."
+        primary_keyword: setting roblox spending limits
+        word_count: 2200
+        schema_type: Article
+    
+    paa_posts:
+      defaults:
+        word_count: 1200
+        schema_type: Article, FAQPage
+      posts:
+        - title: "How can I limit my child's spending on Roblox?"
+          slug: how-can-i-limit-my-childs-spending-on-roblox
+          parent: setting-spending-limits
+
+  - silo_name: "Roblox Safety Education"
+    entity_relationships:
+      primary_entity: "Roblox safety education"
+      supporting_entities:
+        - "online safety"
+        - "digital literacy"
+        - "parent-child communication"
+      related_entities_other_silos:
+        "Roblox Parental Controls": "Education complements technical controls"
+        "Roblox Fraud Prevention": "Education helps kids recognize scams"
+    
+    cross_silo_linking:
+      link_to:
+        - silo: "Roblox Parental Controls"
+          reason: "When explaining how education works with controls"
+        - silo: "Roblox Fraud Prevention"
+          reason: "When discussing how education prevents scams"
+      link_from:
+        - "Roblox Parental Controls"
+        - "Roblox Fraud Prevention"
+    
+    main_pillar:
+      url: /resources/roblox-safety-education
+      title: "Roblox Safety Education: Teaching Kids About Online Safety"
+      h1: "Roblox Safety Education: Teaching Kids About Online Safety"
+      meta_description: "Complete guide to teaching your child about Roblox safety, recognizing scams, and practicing safe online gaming."
+      primary_keyword: roblox safety education
+      word_count: 3500
+      schema_type: Article
+    
+    subtopic_pillars:
+      - url: /resources/roblox-safety-education/teaching-kids-about-online-safety
+        title: "Teaching Kids About Roblox Online Safety: Parent's Guide"
+        meta_description: "Learn how to teach your child about Roblox online safety, recognizing scams, and protecting their account."
+        primary_keyword: teaching kids about roblox online safety
+        word_count: 2200
+        schema_type: Article
+    
+    paa_posts:
+      defaults:
+        word_count: 1200
+        schema_type: Article, FAQPage
+      posts:
+        - title: "How do I teach my child about Roblox safety?"
+          slug: how-do-i-teach-my-child-about-roblox-safety
+          parent: teaching-kids-about-online-safety
+

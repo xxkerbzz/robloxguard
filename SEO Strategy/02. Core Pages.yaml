@@ -1,0 +1,271 @@
+# Core Pages Structure
+# 
+# ├── Home
+# ├── Product
+# ├── Features
+# ├── Pricing
+# ├── About
+# ├── Contact
+# ├── FAQ
+# ├── Security
+# ├── Privacy Policy
+# └── Terms of Service
+
+---
+
+core_pages:
+  - url: /
+    title: RobloxGuard - Stop Roblox Scams Before They Happen
+    h1: Protect Your Child's Roblox Account from Fraud
+    purpose: Homepage with hero, value proposition, features overview, social proof, CTA
+    business_goal: Convert visitors to free trial or paid subscription
+    target_audience: Parents of Roblox players concerned about online safety and unauthorized spending
+    primary_keyword: roblox parental controls
+    content_outline:
+      h2s:
+        - Stop Roblox Scams Before They Happen
+        - How RobloxGuard Protects Your Family
+        - Real-Time Monitoring and Instant Alerts
+        - Trusted by Thousands of Parents
+        - Get Started Today
+    key_messaging:
+      - "Real-time protection that blocks scams before money is spent"
+      - "Instant alerts with block/allow options for suspicious transactions"
+      - "Purpose-built for Roblox with game-specific fraud detection"
+    cta_strategy: Primary CTA: "Start Free Trial", Secondary: "View Pricing"
+    schema_type: Organization, WebSite
+
+  - url: /product
+    title: RobloxGuard Product - Roblox Fraud Protection Platform
+    h1: How RobloxGuard Works
+    purpose: Product overview, how it works, integration details
+    business_goal: Educate prospects on product capabilities and build trust
+    target_audience: Parents evaluating parental control solutions for Roblox
+    primary_keyword: roblox fraud protection
+    content_outline:
+      h2s:
+        - How RobloxGuard Monitors Your Child's Account
+        - Real-Time Fraud Detection
+        - Instant Alerts and Transaction Blocking
+        - Spending Limits and Budget Controls
+        - Weekly Activity Reports
+        - Easy Setup and Integration
+    key_messaging:
+      - "Connects directly to Roblox accounts and payment methods"
+      - "Pattern detection identifies suspicious activity automatically"
+      - "Parents control every transaction with instant approval workflow"
+    cta_strategy: "Start Your Free Trial"
+    schema_type: SoftwareApplication
+
+  - url: /features
+    title: RobloxGuard Features - Complete Roblox Protection
+    h1: Complete Protection for Your Child's Roblox Account
+    purpose: Detailed feature breakdown with benefits
+    business_goal: Showcase comprehensive feature set and competitive advantages
+    target_audience: Parents comparing features across parental control solutions
+    primary_keyword: roblox parental control features
+    content_outline:
+      h2s:
+        - Real-Time Account Monitoring
+        - Fraud Detection and Pattern Recognition
+        - Instant SMS Alerts
+        - Transaction Blocking and Approval
+        - Spending Limits and Budgets
+        - Friend Request Approval
+        - Weekly Activity Reports
+        - Multi-Account Management
+    key_messaging:
+      - "Every feature designed specifically for Roblox fraud prevention"
+      - "Proactive protection, not reactive monitoring"
+    cta_strategy: "See Pricing Plans"
+    schema_type: SoftwareApplication
+
+  - url: /pricing
+    title: RobloxGuard Pricing - Protect Your Child for $12/month
+    h1: Simple, Transparent Pricing
+    purpose: Pricing tiers, feature comparison, FAQ
+    business_goal: Convert visitors to paid subscription
+    target_audience: Parents ready to purchase protection
+    primary_keyword: roblox parental control pricing
+    content_outline:
+      h2s:
+        - Choose Your Plan
+        - All Plans Include
+        - Frequently Asked Questions About Pricing
+        - Start Protecting Your Family Today
+    key_messaging:
+      - "$9-15/month per child, cancel anytime"
+      - "Free trial available, no credit card required"
+    cta_strategy: "Start Free Trial" on each plan
+    schema_type: Offer
+
+  - url: /about
+    title: About RobloxGuard - Our Mission to Protect Kids Online
+    h1: About RobloxGuard
+    purpose: Company story, mission, team, why we built this
+    business_goal: Build trust and credibility with parents
+    target_audience: Parents wanting to understand the company behind the product
+    primary_keyword: about robloxguard
+    content_outline:
+      h2s:
+        - Our Mission
+        - Why We Built RobloxGuard
+        - Our Commitment to Child Safety
+        - Join Thousands of Protected Families
+    key_messaging:
+      - "Built by parents, for parents"
+      - "We understand the frustration of discovering unauthorized charges"
+      - "Our goal is proactive protection, not reactive monitoring"
+    cta_strategy: "Start Your Free Trial"
+    schema_type: Organization
+
+  - url: /contact
+    title: Contact RobloxGuard - Get Help and Support
+    h1: Contact Us
+    purpose: Contact form, support information, office details
+    business_goal: Enable customer support and sales inquiries
+    target_audience: Existing customers and prospects with questions
+    primary_keyword: contact robloxguard
+    content_outline:
+      h2s:
+        - Get in Touch
+        - Support Hours
+        - Common Questions
+    key_messaging:
+      - "We're here to help protect your family"
+      - "Fast response times for all inquiries"
+    cta_strategy: Contact form submission
+    schema_type: ContactPage
+
+  - url: /faq
+    title: RobloxGuard FAQ - Frequently Asked Questions
+    h1: Frequently Asked Questions
+    purpose: Answer common questions about product, setup, pricing, features
+    business_goal: Reduce support burden and address objections
+    target_audience: Prospects with questions before purchasing
+    primary_keyword: robloxguard faq
+    content_outline:
+      h2s:
+        - Getting Started
+        - How It Works
+        - Pricing and Billing
+        - Account Management
+        - Security and Privacy
+    key_messaging:
+      - "Clear answers to help you make an informed decision"
+    cta_strategy: "Start Free Trial" at bottom
+    schema_type: FAQPage
+
+  - url: /security
+    title: RobloxGuard Security - How We Protect Your Data
+    h1: Security and Privacy
+    purpose: Security measures, data protection, compliance, privacy commitment
+    business_goal: Build trust with security-conscious parents
+    target_audience: Parents concerned about data privacy and security
+    primary_keyword: robloxguard security
+    content_outline:
+      h2s:
+        - How We Protect Your Data
+        - Data Encryption and Storage
+        - Compliance and Certifications
+        - Your Privacy Rights
+        - Security Best Practices
+    key_messaging:
+      - "Bank-level encryption for all data"
+      - "We never share your information with third parties"
+    cta_strategy: "Learn More About Our Product"
+    schema_type: WebPage
+
+  - url: /privacy
+    title: RobloxGuard Privacy Policy
+    h1: Privacy Policy
+    purpose: Legal privacy policy document
+    business_goal: Legal compliance and transparency
+    target_audience: All users
+    primary_keyword: robloxguard privacy policy
+    content_outline:
+      h2s:
+        - Information We Collect
+        - How We Use Your Information
+        - Information Sharing
+        - Data Security
+        - Your Rights
+        - Children's Privacy
+        - Changes to This Policy
+        - Contact Us
+    key_messaging:
+      - "Transparent about data collection and usage"
+    cta_strategy: None (legal page)
+    schema_type: WebPage
+
+  - url: /terms
+    title: RobloxGuard Terms of Service
+    h1: Terms of Service
+    purpose: Legal terms of service document
+    business_goal: Legal compliance
+    target_audience: All users
+    primary_keyword: robloxguard terms of service
+    content_outline:
+      h2s:
+        - Acceptance of Terms
+        - Description of Service
+        - User Accounts
+        - Payment Terms
+        - Cancellation and Refunds
+        - Intellectual Property
+        - Limitation of Liability
+        - Changes to Terms
+        - Contact Information
+    key_messaging:
+      - "Clear terms for service usage"
+    cta_strategy: None (legal page)
+    schema_type: WebPage
+
+navigation:
+  header:
+    - label: Home
+      url: /
+    - label: Product
+      url: /product
+    - label: Features
+      url: /features
+    - label: Pricing
+      url: /pricing
+    - label: Resources
+      url: /resources
+      dropdown:
+        - label: Roblox Parental Controls
+          url: /resources/roblox-parental-controls
+        - label: Roblox Account Security
+          url: /resources/roblox-account-security
+        - label: Roblox Fraud Prevention
+          url: /resources/roblox-fraud-prevention
+        - label: Roblox Spending Management
+          url: /resources/roblox-spending-management
+        - label: Roblox Safety Education
+          url: /resources/roblox-safety-education
+    - label: About
+      url: /about
+    - label: Contact
+      url: /contact
+  
+  footer:
+    - label: Product
+      url: /product
+    - label: Features
+      url: /features
+    - label: Pricing
+      url: /pricing
+    - label: About
+      url: /about
+    - label: Contact
+      url: /contact
+    - label: FAQ
+      url: /faq
+    - label: Security
+      url: /security
+    - label: Privacy
+      url: /privacy
+    - label: Terms
+      url: /terms
+
