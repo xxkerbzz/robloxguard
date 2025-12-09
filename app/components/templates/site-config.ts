@@ -53,7 +53,7 @@ export const defaultSiteConfig: SiteConfig = {
   pricingUrl: "/pricing",
   ctaPrimaryText: "Start Free Trial",
   ctaSecondaryText: "View Pricing",
-  contentDirectory: "../SEO Strategy/content",
+  contentDirectory: "SEO Strategy/content",
   useStandardNaming: true,
 };
 
