@@ -1,4 +1,7 @@
+import fs from 'fs';
+import path from 'path';
 import { getAllContentSlugs } from './content';
+import { getSiteConfig } from '../components/templates/site-config';
 
 export interface SitemapUrl {
   loc: string;
@@ -97,9 +100,6 @@ const corePages: SitemapUrl[] = [
  */
 function getContentFileDate(slug: string[]): Date {
   try {
-    const fs = require('fs');
-    const path = require('path');
-    const { getSiteConfig } = require('./content');
     const config = getSiteConfig();
     const CONTENT_DIR = path.isAbsolute(config.contentDirectory)
       ? config.contentDirectory
