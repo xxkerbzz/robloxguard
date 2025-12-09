@@ -3,11 +3,50 @@ import path from 'path';
 import matter from 'gray-matter';
 import { getSiteConfig } from './site-config';
 
-// Get content directory from config
-const config = getSiteConfig();
-const CONTENT_DIR = path.isAbsolute(config.contentDirectory)
-  ? config.contentDirectory
-  : path.join(process.cwd(), config.contentDirectory);
+/**
+ * Get content directory path
+ * Works in both development and production (Vercel) environments
+ * Calculated at runtime to handle different build environments
+ */
+function getContentDirectory(): string {
+  const config = getSiteConfig();
+  
+  if (path.isAbsolute(config.contentDirectory)) {
+    return config.contentDirectory;
+  }
+  
+  // Find project root by looking for package.json
+  let currentPath = process.cwd();
+  let projectRoot = currentPath;
+  
+  // In Vercel, process.cwd() might be /var or a build directory
+  // Search upward for package.json to find the actual project root
+  for (let i = 0; i < 10; i++) {
+    const packageJsonPath = path.join(currentPath, 'package.json');
+    if (fs.existsSync(packageJsonPath)) {
+      projectRoot = currentPath;
+      break;
+    }
+    const parentPath = path.resolve(currentPath, '..');
+    if (parentPath === currentPath) break; // Reached filesystem root
+    currentPath = parentPath;
+  }
+  
+  // Try the found project root
+  const testPath = path.join(projectRoot, config.contentDirectory);
+  if (fs.existsSync(testPath)) {
+    return testPath;
+  }
+  
+  // Fallback: try process.cwd() directly
+  const fallbackPath = path.join(process.cwd(), config.contentDirectory);
+  if (fs.existsSync(fallbackPath)) {
+    return fallbackPath;
+  }
+  
+  // Last resort: return the expected path (will log warning if not found)
+  return path.join(projectRoot, config.contentDirectory);
+}
 
 export interface ContentFrontmatter {
   title: string;
@@ -48,6 +87,7 @@ export async function getContentBySlug(slugArray: string[]): Promise<ContentData
   try {
     let filePath: string;
     const siteConfig = getSiteConfig();
+    const CONTENT_DIR = getContentDirectory(); // Calculate at runtime
     
     if (slugArray.length === 1) {
       // Pillar page
@@ -125,6 +165,7 @@ export async function getContentBySlug(slugArray: string[]): Promise<ContentData
 export async function getAllContentSlugs(): Promise<string[][]> {
   const slugs: string[][] = [];
   const siteConfig = getSiteConfig();
+  const CONTENT_DIR = getContentDirectory(); // Calculate at runtime
 
   if (!fs.existsSync(CONTENT_DIR)) {
     console.warn(`Content directory not found: ${CONTENT_DIR}`);
