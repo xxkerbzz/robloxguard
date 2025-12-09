@@ -46,6 +46,7 @@ ${urls.map((url) => {
       { loc: `${BASE_URL}/privacy`, lastmod: new Date(), changefreq: 'yearly' as const, priority: 0.5 },
       { loc: `${BASE_URL}/terms`, lastmod: new Date(), changefreq: 'yearly' as const, priority: 0.5 },
       { loc: `${BASE_URL}/resources`, lastmod: new Date(), changefreq: 'weekly' as const, priority: 0.9 },
+      { loc: `${BASE_URL}/sitemap`, lastmod: new Date(), changefreq: 'monthly' as const, priority: 0.5 },
     ];
 
     const fallbackSitemap = `<?xml version="1.0" encoding="UTF-8"?>

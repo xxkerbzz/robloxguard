@@ -84,7 +84,49 @@ const corePages: SitemapUrl[] = [
     changefreq: 'weekly',
     priority: 0.9,
   },
+  {
+    loc: `${BASE_URL}/sitemap`,
+    lastmod: CURRENT_DATE,
+    changefreq: 'monthly',
+    priority: 0.5,
+  },
 ];
+
+/**
+ * Get file modification date for a content file
+ */
+function getContentFileDate(slug: string[]): Date {
+  try {
+    const fs = require('fs');
+    const path = require('path');
+    const { getSiteConfig } = require('./content');
+    const config = getSiteConfig();
+    const CONTENT_DIR = path.isAbsolute(config.contentDirectory)
+      ? config.contentDirectory
+      : path.join(process.cwd(), config.contentDirectory);
+
+    let filePath: string;
+    
+    if (slug.length === 1) {
+      filePath = path.join(CONTENT_DIR, `Pillar - ${slug[0]}`, `${slug[0]}.md`);
+    } else if (slug.length === 2) {
+      filePath = path.join(CONTENT_DIR, `Pillar - ${slug[0]}`, `Cluster - ${slug[1]}`, `${slug[1]}.md`);
+    } else if (slug.length === 3) {
+      filePath = path.join(CONTENT_DIR, `Pillar - ${slug[0]}`, `Cluster - ${slug[1]}`, 'Blog', `${slug[2]}.md`);
+    } else {
+      return CURRENT_DATE;
+    }
+
+    if (fs.existsSync(filePath)) {
+      const stats = fs.statSync(filePath);
+      return stats.mtime || stats.birthtime || CURRENT_DATE;
+    }
+  } catch (error) {
+    // Fallback to current date if file date can't be determined
+  }
+  
+  return CURRENT_DATE;
+}
 
 /**
  * Generate sitemap URLs for all SEO content pages
@@ -115,9 +157,12 @@ export async function generateContentSitemapUrls(): Promise<SitemapUrl[]> {
         changefreq = 'monthly';
       }
 
+      // Use actual file modification date for better SEO
+      const fileDate = getContentFileDate(slug);
+
       urls.push({
         loc: `${BASE_URL}${urlPath}`,
-        lastmod: CURRENT_DATE,
+        lastmod: fileDate,
         changefreq,
         priority,
       });
