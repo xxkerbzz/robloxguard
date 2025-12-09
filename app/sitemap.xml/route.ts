@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { generateSitemapUrls } from '../../lib/sitemap-utils';
+import { generateSitemapUrls } from '../lib/sitemap-utils';
 
 export async function GET() {
   try {
